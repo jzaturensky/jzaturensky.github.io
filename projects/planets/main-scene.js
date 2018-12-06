@@ -31,7 +31,7 @@ class Assignment_Two_Test extends Scene_Component
           { test:     context.get_instance( Phong_Shader ).material( Color.of( 1,1,1,1 ), { ambient: .2 } ),
             ring:     context.get_instance( Ring_Shader  ).material(),
             sun:      context.get_instance( Phong_Shader ).material( Color.of( 1,1,0,1 ), { ambient: 1 } ),
-            planet1:  context.get_instance( Phong_Shader ).material( Color.of( 0.5,0.5,0.5,1 ), { diffusivity: 1 } ),
+            planet1:  context.get_instance( Phong_Shader ).material( Color.of( 0.5,0.5,0.5,1 ), { diffusivity: 1, specularity: 0 } ),
             planet2:  context.get_instance( Phong_Shader ).material( Color.of( 0,1,0.75,1 ), { diffusivity: .3, specularity: 1 } ),
             planet3:  context.get_instance( Phong_Shader ).material( Color.of( 0.75,0.5,0.25,1 ), { diffusivity: 1, specularity: 1 } ),
             planet4:  context.get_instance( Phong_Shader ).material( Color.of( 0.25,0.25,1,1 ), { specularity: .7 } ),
@@ -48,9 +48,9 @@ class Assignment_Two_Test extends Scene_Component
         setInterval(() => {
           this.p2Gouraud = !this.p2Gouraud;
           if (this.p2Gouraud) {
-            this.materials.planet2.override({gouraud: 1});
+            this.materials.planet2 = this.materials.planet2.override({gouraud: 1});
           } else {
-            this.materials.planet2.override({gouraud: undefined});
+            this.materials.planet2 = this.materials.planet2.override({gouraud: undefined});
           }
         }, 1000);
       }

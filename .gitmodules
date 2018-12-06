@@ -1,0 +1,6 @@
+[submodule "projects/term-project-group-21"]
+	path = projects/term-project-group-21
+	url = https://github.com/ucla-fa18-cs174a/term-project-group-21
+[submodule "projects/a2-jzaturensky"]
+	path = projects/a2-jzaturensky
+	url = https://github.com/ucla-fa18-cs174a/a2-jzaturensky

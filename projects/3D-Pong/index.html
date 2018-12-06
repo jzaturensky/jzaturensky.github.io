@@ -1,0 +1,28 @@
+<!-- Graphics Example Code.  index.html - The web page document containing the canvas (drawing surface), that launches your javascript files. //-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" href="assets/fav.ico">
+    <script>
+        window.tiny_graphics = {};             // Store all our JavaScipt code inside of classes here.
+        window.classes = {}
+    </script>
+    <!--  Javascript "include" files.  Any code in them gets executed as part of the page loading: //-->
+    <script src="tiny-graphics.js"></script>
+    <script src="dependencies.js"></script>
+    <script src="main-scene.js"></script>
+</head>
+<body style="background: DarkGray">       <!-- Begin typing your web page here. //-->
+
+<!-- The following code embeds a WebGL canvas panel widget with certain scenes and their controls. //-->
+
+<div style="width: 600px; margin: 0 auto">
+    <div id="main-canvas" class="canvas-widget" style="cursor: none"></div>
+</div>
+
+<script> "use strict";
+new Canvas_Widget("main-canvas", ["PongScene"]);
+</script>
+</body>
+</html>
